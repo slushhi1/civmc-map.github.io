@@ -53,12 +53,14 @@
 			</div>
 		</div>
 		<script>
-		  // Set default viewport to Bloom before app loads
 		  try {
-		    const stored = localStorage.getItem('civmap:mapView');
+		    const stored = localStorage.getItem('CivMap.view.3.0.0-beta3');
 		    if (!stored) {
-		      localStorage.setItem('civmap:mapView', JSON.stringify({
-		        x: -4150, z: -5800, radius: 2500
+		      localStorage.setItem('CivMap.view.3.0.0-beta3', JSON.stringify({
+		        mapView: {
+		          basemapId: "terrain",
+		          viewport: { x: -4150, z: -5800, radius: 2500 }
+		        }
 		      }));
 		    }
 		  } catch(e) {}
