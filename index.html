@@ -53,6 +53,18 @@
 			</div>
 		</div>
 		<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+		<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
+		<script>
+		  window.addEventListener('load', function() {
+		    setTimeout(function() {
+		      if (window.CivMap && window.CivMap.api) {
+		        window.CivMap.api.dispatch({
+		          type: 'SET_VIEWPORT',
+		          viewport: { x: -4150, z: -5800, radius: 2500 }
+		        });
+		      }
+		    }, 1500);
+		  });
+		</script>
 	</body>
 </html>
